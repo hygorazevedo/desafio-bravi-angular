@@ -1,0 +1,77 @@
+<span class="page-title">Edição de Dados do Cliente</span>
+
+<form [formGroup]="clienteForm" novalidate autocomplete="false">
+    <div class="field">
+        <div class="control">
+            <input id="identificador" class="input" type="text" placeholder="identificador" formControlName="identificador">
+        </div>
+    </div>
+
+    <div class="field inline">
+        <span class="field-description">Nome*:</span>
+        <div class="control">
+            <input [ngClass]="{'is-danger': displayMessage['nome'] !== undefined}" class="input" type="text" placeholder="Nome" formControlName="nome">
+            <p *ngIf="displayMessage['nome']" class="help is-danger">
+                {{ displayMessage['nome'] }}
+            </p>
+        </div>
+    </div>
+
+    <div class="field inline">
+        <span class="field-description">Email:</span>
+        <div class="control">
+            <input class="input" type="email" placeholder="Email" formControlName="email">
+        </div>
+    </div>
+
+    
+
+    <div class="field inline">
+        <div>
+            <div style="margin-bottom: 8px;">Telefone</div>
+            <div class="field inline">
+                <div class="field inline">
+                    <span class="field-description">DDD:</span>
+                    <div class="control">
+                        <input class="input short" type="text" placeholder="DDD" formControlName="dddTelefone">
+                    </div>
+                </div>
+            
+                <div class="field inline">
+                    <span class="field-description">Número:</span>
+                    <div class="control">
+                        <input class="input" type="text" class="input" placeholder="Telefone" formControlName="numeroTelefone">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div style="margin-bottom: 8px;">WhatsApp</div>
+            <div class="field inline">
+                <div class="field inline">
+                    <span class="field-description">DDD:</span>
+                    <div class="control">
+                        <input class="input short" type="text" placeholder="DDD" formControlName="dddWhatsApp">
+                    </div>
+                </div>
+            
+                <div class="field inline">
+                    <span class="field-description">Número:</span>
+                    <div class="control">
+                        <input class="input" type="text" class="input" placeholder="Telefone" formControlName="numeroWhatsApp">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <span class="button bordered" (click)="handleVoltar()">
+            <span class="button-content">Voltar</span>
+        </span>
+        <span class="button bordered" (click)="handleEditar()">
+            <span class="button-content">Editar</span>
+        </span>
+    </div>
+</form>

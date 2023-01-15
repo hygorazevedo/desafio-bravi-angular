@@ -1,0 +1,35 @@
+<span class="page-title">Informações do Cliente</span>
+
+<div class="cliente-details bordered">
+    <span id="cliente-details-identificador">{{cliente?.identificador}}</span>
+    
+    <div id="cliente-details-nome">
+        Nome: 
+        {{cliente?.nome}}
+    </div>
+
+    <span id="cliente-details-email">Email: {{cliente?.email}}</span>
+
+    <div class="cliente-details-telefone">
+        Telefone: 
+        <span class="cliente-details-informations">({{cliente?.telefone?.codigoDiscagem ?? ''}}) </span>
+        <span class="cliente-details-informations">{{cliente?.telefone?.numero ?? ''}}</span>
+    </div>
+
+    <div class="cliente-details-whatsApp">
+        WhatsApp: 
+        <span id="cliente-details-codigoDiscagem-telefone">({{cliente?.whatsApp?.codigoDiscagem ?? ''}}) </span>
+        <span id="cliente-details-numero-telefone">{{cliente?.whatsApp?.numero ?? ''}}</span>
+    </div>
+</div>
+<div class="buttons">
+    <span class="button bordered" (click)="handleVoltar()">
+        <span class="button-content">Voltar</span>
+    </span>
+    <span class="button bordered" (click)="handleEditar()">
+        <span class="button-content">Editar</span>
+    </span>
+    <span class="button bordered" (click)="handleRemover()">
+        <span class="button-content">Remover</span>
+    </span>
+</div>

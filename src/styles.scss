@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    margin: 20px 5%;
+    display: flex;
+    flex-direction: column;
+
+    .page-title {
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+    }
+}
+
+
+.button {
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+
+    &:active {
+        background-color: lightgrey;
+    }
+
+    .button-content {
+        margin: 6px;
+    }
+}
+
+.bordered {
+    border: 1px solid black;
+    border-radius: 6px;
+}

@@ -1,0 +1,84 @@
+<span class="page-title">Novo Cliente</span>
+
+<form [formGroup]="clienteForm" novalidate autocomplete="false">
+    <div class="field inline">
+        <span class="field-description">Nome*:</span>
+        <div class="control">
+            <input [ngClass]="{'is-danger': displayMessage['nome'] !== undefined}" class="input" type="text" placeholder="Nome" maxlength="105" formControlName="nome">
+            <p *ngIf="displayMessage['nome']" class="help is-danger">
+                {{ displayMessage['nome'] }}
+            </p>
+        </div>
+    </div>
+
+    <div class="field inline">
+        <span class="field-description">Email:</span>
+        <div class="control">
+            <input class="input" type="email" placeholder="Email" maxlength="115" formControlName="email">
+            <p *ngIf="displayMessage['email']" class="help is-danger">
+                {{ displayMessage['email'] }}
+            </p>
+        </div>
+    </div>
+
+    <div class="field inline">
+        <div>
+            <div style="margin-bottom: 8px;">Telefone</div>
+            <div class="field inline">
+                <div class="field inline">
+                    <span class="field-description">DDD:</span>
+                    <div class="control">
+                        <input class="input short" type="text" placeholder="00" maxlength="2"  formControlName="dddTelefone">
+                    </div>
+                </div>
+            
+                <div class="field inline">
+                    <span class="field-description">Número:</span>
+                    <div class="control">
+                        <input class="input" type="text" class="input" placeholder="000000000" maxlength="9" formControlName="numeroTelefone">
+                    </div>
+                </div>
+            </div>
+            <p *ngIf="displayMessage['dddTelefone']" class="help is-danger">
+                {{ displayMessage['dddTelefone'] }}
+            </p>
+            <p *ngIf="displayMessage['numeroTelefone']" class="help is-danger">
+                {{ displayMessage['numeroTelefone'] }}
+            </p>
+        </div>
+
+        <div>
+            <div style="margin-bottom: 8px;">WhatsApp</div>
+            <div class="field inline">
+                <div class="field inline">
+                    <span class="field-description">DDD:</span>
+                    <div class="control">
+                        <input class="input short" type="text" placeholder="00" maxlength="2" formControlName="dddWhatsApp">
+                    </div>
+                </div>
+            
+                <div class="field inline">
+                    <span class="field-description">Número:</span>
+                    <div class="control">
+                        <input class="input" type="text" class="input" placeholder="000000000" maxlength="9" formControlName="numeroWhatsApp">
+                    </div>
+                </div>
+            </div>
+            <p *ngIf="displayMessage['dddWhatsApp']" class="help is-danger">
+                {{ displayMessage['dddWhatsApp'] }}
+            </p>
+            <p *ngIf="displayMessage['numeroWhatsApp']" class="help is-danger">
+                {{ displayMessage['numeroWhatsApp'] }}
+            </p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <span class="button bordered" (click)="handleCancelar()">
+            <span class="button-content">Cancelar</span>
+        </span>
+        <span class="button bordered" (click)="handleCadastrar()">
+            <span class="button-content">Cadastrar</span>
+        </span>
+    </div>
+</form>

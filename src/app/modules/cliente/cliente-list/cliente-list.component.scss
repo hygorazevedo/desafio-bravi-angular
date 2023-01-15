@@ -1,0 +1,28 @@
+.search-create-cliente {
+    display: flex;
+    margin-top: 20px;
+}
+
+.cliente-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    cursor: pointer;
+    user-select: none;
+
+    &:active {
+        background-color: lightgrey;
+    }
+
+    margin-top: 20px;
+    padding: 6px 10px;
+
+    .buttons {
+        display: flex;
+        :first-child {
+            margin-right: 8px;
+        }
+    }
+}

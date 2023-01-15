@@ -1,0 +1,15 @@
+<span class="page-title">Lista de Clientes</span>
+
+<div class="search-create-cliente">
+    <span class="button bordered" (click)="handleCriar()">
+        <span class="button-content">Criar</span>
+    </span>
+</div>
+
+
+<div class="cliente-list bordered" *ngFor="let item of $clientes | async" (click)="handleVisualizar(item)">
+    <div class="cliente-list-informations">
+        <span style="display: none;">{{item.identificador}}</span>
+        {{item.nome}}
+    </div>
+</div>

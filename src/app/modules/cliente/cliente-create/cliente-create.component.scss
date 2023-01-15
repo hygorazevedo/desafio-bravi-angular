@@ -1,0 +1,79 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    > * {
+        margin-bottom: 10px;
+    }
+
+    .field {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+
+        :first-child {
+            margin-right: 10px;
+        }
+
+        .field-description {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        &.inline {
+            flex-direction: row;
+        }
+
+        .control {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .input {
+                display: flex;
+                width: inherit;
+    
+                border: 1px solid;
+                border-radius: 4px;
+    
+                padding: 6px 10px;
+    
+                &.short {
+                    width: 40px;
+                }
+
+                
+            }
+
+            .ng-touched, .ng-dirty {
+                &.ng-invalid {
+                    border: 1px solid red;
+                }
+            }
+    
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+    
+        margin-top: 20px;
+        
+        > * {
+            margin-right: 8px;
+    
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.help {
+    &.is-danger {
+        color: red;
+        margin-left: 6px;
+    }
+}

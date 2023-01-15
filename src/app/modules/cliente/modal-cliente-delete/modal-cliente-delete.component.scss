@@ -1,0 +1,20 @@
+.deletePanel {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+
+        margin-top: 20px;
+        
+        > * {
+            margin-right: 8px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
